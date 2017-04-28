@@ -26,7 +26,7 @@ function Hex(sideLength) {
 	}
 
 	this.shake = function(obj) { //lane as in particle lane
-		var angle = 30 + obj.lane * 60;
+		var angle = 36 + obj.lane * 72;
 		angle *= Math.PI / 180;
 		var dx = Math.cos(angle) * obj.magnitude;
 		var dy = Math.sin(angle) * obj.magnitude;
@@ -120,17 +120,17 @@ function Hex(sideLength) {
 		}
 
 		while (this.position < 0) {
-			this.position += 6;
+			this.position += 5;
 		}
 
 		this.position = this.position % this.sides;
 		this.blocks.forEach(function(blocks) {
 			blocks.forEach(function(block) {
-				block.targetAngle = block.targetAngle - steps * 60;
+				block.targetAngle = block.targetAngle - steps * 72;
 			});
 		});
 
-		this.targetAngle = this.targetAngle - steps * 60;
+		this.targetAngle = this.targetAngle - steps * 72;
 				this.lastRotate = Date.now();
 	};
 
