@@ -6,7 +6,7 @@ function Hex(sideLength) {
 	this.position = 0;
 	this.dy = 0;
 	this.dt = 1;
-	this.sides = 6;
+	this.sides = 5;
 	this.blocks = [];
 	this.angle = 180 / this.sides;
 	this.targetAngle = this.angle;
